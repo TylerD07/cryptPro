@@ -1,0 +1,318 @@
+body {
+    background-color: #000000;
+    font-family: 'Cinzel', serif;
+    color: #f6f6f6;
+
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 40px;
+    margin: 20px;
+}
+
+header {
+    background-color: rgb(151, 0, 226);
+    border-bottom: 8px solid #f6f6f6;
+    text-align: center;
+}
+
+main {
+    box-sizing: content-box;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(244, 244, 244, .75);
+    align-self: center;
+    width: 100%;
+    max-width: 1080px;
+    border: solid rgba(151, 0, 226, 0.2);
+    border-width: 0 60px;
+    padding: 40px 0;
+}
+
+.chart-dropdowns {
+    display: flex;
+    justify-content: space-around;
+
+    box-sizing: border-box;
+    background-color: #303030;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+}
+.chart {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 980px;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #303030;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.purchase-window{
+    background-color: #303030;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px 0 0;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.exchange {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.wallet {
+    width: 100%;
+}
+.submit {
+    font-family: inherit;
+    border: 2px outset rgb(151, 0, 226);
+    background-color: rgba(151, 0, 226, .7);
+    color: #f6f6f6;
+    margin: 10px 0 10px 20px;
+    padding: 0 30px;
+    cursor: pointer;
+    flex: 0;
+}
+.submit:active {
+    background-color: rgba(151, 0, 226, .5);
+    border-style: inset;
+}
+.submit:focus {
+    outline: none;
+}
+
+.input-row {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 5px 20px;
+}
+.input-row > *:not(.submit) {
+    flex: 1;
+}
+.select-title {
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px cyan solid;
+    border-width: 0 0 2px 0;
+    align-self: center;
+    padding: 4px;
+}
+.error {
+    color: rgb(255, 153, 153);
+}
+
+.custom-select select {
+    display: none;
+}
+.custom-select, input {
+    background-color: #303030;
+    color:white;
+    font-size: 20px;
+    height: 30px;
+    border: 2px cyan solid;
+    border-width: 0 0 2px;
+    margin: 10px 0;
+    padding: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-select {
+    cursor: pointer;
+    position: relative;
+}
+.option-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    width: 100%;
+    cursor: default;
+
+    background-color: rgba(255, 255, 255, .9);
+    color: #303030;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 300;
+}
+.custom-option {
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
+}
+.custom-option:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+.hidden {
+    display: none;
+}
+
+input:focus {
+    outline: none;
+}
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+    font-family: 'Inconsolata', monospace;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, .5);
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(255, 255, 255, .5);
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(255, 255, 255, .5);
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255, 255, 255, .5);
+}
+
+#tweets{
+    z-index:2;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#tweet iframe {
+    border: none;
+    box-shadow: none;
+    text-align:center;
+  }
+.tweetHead{
+    font-weight:bold;
+    text-align: center;
+    background-size: contain;
+    background: rgb(151, 0, 226);
+    border: solid #f6f6f6;
+    border-width: 15px 0;
+    margin: 0;
+    padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Scroll Bar Styles */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #252525; 
+    border-left: 1px solid #f6f6f6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f6f6f6de; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f6f6f6; 
+}
+
+footer {
+    background-color: rgb(151, 0, 226);
+    border-top: 15px solid #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+
+#defaultCanvas0{
+    position: fixed;
+    z-index: -100000;
+    
+}
+
+@media only screen and (max-width: 1170px) {
+    .chart {
+        border-radius: 0;
+        border-width: 8px 0;
+        max-width: none;
+    }
+    main {
+        box-sizing: border-box;
+        border-width: 0 40px;
+        max-width: none;
+    }
+}
+@media only screen and (max-width: 970px) {
+    .chart-dropdowns {
+        border-radius: 0;
+        border-width: 8px 0;
+        max-width: none;
+    }
+}
+@media only screen and (max-width: 870px) {
+    .chart-dropdowns {
+        flex-direction: column;
+    }
+    .exchange {
+        flex-direction: column;
+    }
+    .purchase-window {
+        max-width: 600px;
+    }
+}
+@media only screen and (max-width: 770px) {
+    .purchase-window {
+        margin: 0;
+        border-radius: 0;
+        max-width: none;
+    }
+}
+@media only screen and (max-width: 500px) {
+    input {
+        width: 100%;
+        font-size: 15px;
+    }
+    main {
+        border-width: 0;
+    }
+    .wallet {
+        flex-direction: column;
+        align-items: center;
+    }
+    .submit {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+}
